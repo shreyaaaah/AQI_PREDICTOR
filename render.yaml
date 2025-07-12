@@ -3,7 +3,7 @@ services:
     name: BREATHEWISE_AQI_PREDICTOR
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "streamlit run app.py --server.port=10000 --server.enableCORS=false"
-    runtime:
+    build:
+      buildCommand: "pip install -r requirements.txt"
       pythonVersion: 3.12.3
+    startCommand: "streamlit run app.py --server.port=10000 --server.enableCORS=false"
