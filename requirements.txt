@@ -1,0 +1,7 @@
+streamlit
+requests
+numpy
+pandas
+joblib
+scikit-learn
+streamlit-echarts
