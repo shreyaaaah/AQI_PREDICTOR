@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: breathewise-aqi-app
+    name: BREATHEWISE-AQI-PREDICTOR
     env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "streamlit run app.py"
