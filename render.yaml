@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: BREATHEWISE-AQI-PREDICTOR
+    name: BREATHEWISE_AQI_PREDICTOR
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "streamlit run app.py"
+    startCommand: "streamlit run app.py --server.port=10000 --server.enableCORS=false"
     pythonVersion: 3.12.3
