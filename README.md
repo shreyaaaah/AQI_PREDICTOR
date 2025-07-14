@@ -16,7 +16,6 @@ An interactive real-time Air Quality Index (AQI) prediction web app built using 
 
 ## 📁 Repository Structure
 
-```
 BreatheWise/
 │
 ├── 📄 README.md                         # Project overview and instructions
@@ -61,8 +60,12 @@ BreatheWise/
 ├── 📁 assets/                           # Static files & images
 │   └── pexels-pixabay-266558.jpg
 │
+├── 📁 docs/                             # Project report and result documents
+│   ├── FINAL PROJECT REPORT.pdf
+│   └── FINAL RESULT.pdf
+│
 └── .gitignore                           # Ignore list for Git
-```
+
 
 ---
 
