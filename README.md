@@ -116,8 +116,8 @@ streamlit run app.py
 
 ## 📁 Project Documents
 
-* 📄 [Final Project Report (PDF)](docs/FINAL%20PROJECT%20REPORT.pdf)
-* 📄 [Final Result Screenshots (PDF)](docs/FINAL%20RESULT.pdf)
+* 📄 [Final Project Report (PDF)](report/FINAL%20PROJECT%20REPORT.pdf)
+* 📄 [Final Result Screenshots (PDF)](report/FINAL%20RESULT.pdf)
 
 ---
 
@@ -130,6 +130,6 @@ streamlit run app.py
 ## ✨ Author
 
 **Shreya**
-📎 GitHub: [shreyaaaah](https://github.com/shreyaaaah)
+📎 GitHub: [shreyaaaah](https://github.com/shreyaaaah)  , [iamadithyans](https://github.com/iamadithyans) , Alan
 
 ---
