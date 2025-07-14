@@ -103,6 +103,7 @@ pip install -r requirements.txt
 
 ```bash
 streamlit run app.py
+ Replace the placeholder API_KEY value in app.py with your actual OpenWeather API key before running the app.
 ```
 
 ---
