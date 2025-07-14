@@ -11,11 +11,13 @@ An interactive real-time Air Quality Index (AQI) prediction web app built using 
 * 🌀 Live pollutant visualizations with **bar charts & AQI gauge**
 * 🌐 Clean, styled UI with background image
 * 🌟 Fully deployable on **Streamlit Cloud** or **Render**
+* 📁 Project report and result documents available in `docs/`
 
 ---
 
 ## 📁 Repository Structure
 
+```
 BreatheWise/
 │
 ├── 📄 README.md                         # Project overview and instructions
@@ -65,7 +67,7 @@ BreatheWise/
 │   └── FINAL RESULT.pdf
 │
 └── .gitignore                           # Ignore list for Git
-
+```
 
 ---
 
@@ -106,16 +108,22 @@ pip install -r requirements.txt
 
 ```bash
 streamlit run app.py
- Replace the placeholder API_KEY value in app.py with your actual OpenWeather API key before running the app.
 ```
+
+> 📌 **Important:** Replace the placeholder `API_KEY` value in `app.py` with your actual OpenWeather API key before running the app.
+
+---
+
+## 📁 Project Documents
+
+* 📄 [Final Project Report (PDF)](docs/FINAL%20PROJECT%20REPORT.pdf)
+* 📄 [Final Result Screenshots (PDF)](docs/FINAL%20RESULT.pdf)
 
 ---
 
 ## 📌 Deployed at
 
-
-
-Local test: [http://localhost:8501/](http://localhost:8501/)
+* Local test: [http://localhost:8501/](http://localhost:8501/)
 
 ---
 
