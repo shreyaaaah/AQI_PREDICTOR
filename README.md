@@ -1,54 +1,123 @@
-
 # 🌬️ BreatheWise - The Smart AQI Predictor
 
-An interactive real-time Air Quality Index (AQI) predictor app built using Python, Streamlit, and OpenWeather API.
+An interactive real-time Air Quality Index (AQI) prediction web app built using **Python, Streamlit, Optuna-tuned ML models, and OpenWeather API**.
+
+---
 
 ## 📌 Features
-- Real-time weather and pollutant data fetching via OpenWeather API.
-- ML-powered AQI value prediction (regression) and category classification.
-- Live pollutant visualizations (bar charts and AQI gauge).
-- Clean, styled UI with background images.
-- Deploy-ready on Streamlit Cloud.
+
+* 🔢 Real-time weather & pollutant data fetching via OpenWeather API
+* 🔢 ML-powered AQI prediction — both **category classification** and **index regression**
+* 🌀 Live pollutant visualizations with **bar charts & AQI gauge**
+* 🌐 Clean, styled UI with background image
+* 🌟 Fully deployable on **Streamlit Cloud** or **Render**
+
+---
+
+## 📁 Repository Structure
+
+```
+BreatheWise/
+│
+├── 📄 README.md                         # Project overview and instructions
+├── 📄 requirements.txt                  # Python dependencies
+├── 📄 Dockerfile                        # Docker setup for Render deployment
+├── 📄 render.yaml                       # Render deployment config
+├── 📄 runtime.txt                       # Python version pinning for Streamlit
+│
+├── 📁 data/                             # Datasets
+│   ├── balanced_station_day_realtime.csv
+│   ├── cleaned_station_day_realtime.csv
+│   └── station_day.csv
+│
+├── 📁 models/                           # Trained models and scalers
+│   ├── final_stack_model_optimized.pkl
+│   ├── final_stack_model_unbalanced.pkl
+│   ├── final_stack_regression_optimized.pkl
+│   ├── label_encoder_station.pkl
+│   ├── label_encoder_unbalanced.pkl
+│   ├── scaler_station.pkl
+│   ├── scaler_unbalanced.pkl
+│   └── scaler_regression.pkl
+│
+├── 📁 notebooks/                        # EDA plots & analysis
+│   └── EDA_PLOTS/
+│
+├── 📁 scripts/                          # Python scripts for training and prediction
+│   ├── app.py                           # Streamlit dashboard
+│   ├── balance_aqicategory.py           # Balancing AQI categories
+│   ├── classification.py                # Classification model training
+│   ├── regression.py                    # Regression model training
+│   ├── eda.py                           # EDA visualizations
+│   ├── preprocessing.py                 # Preprocessing and feature engineering
+│   ├── predictor_balanced.py            # Streamlit app for balanced model prediction
+│   ├── predictor_unbalanced.py          # Streamlit app for unbalanced model prediction
+│   ├── sizecalc.py                      # Utility: dataset size calculation
+│   └── unbalanced_classi.py             # Unbalanced dataset classification script
+│
+├── 📁 logs/                             # CatBoost logs
+│   └── catboost_info/
+│
+├── 📁 assets/                           # Static files & images
+│   └── pexels-pixabay-266558.jpg
+│
+└── .gitignore                           # Ignore list for Git
+```
+
+---
+
+## 📊 Models
+
+* **Classification Model:**
+  Stacking-based ensemble using **XGBoost**, **LightGBM**, and **CatBoost**, tuned with Optuna
+  📊 Predicts AQI categories: *Good, Satisfactory, Moderate, Poor, Very Poor, Severe*
+
+* **Regression Model:**
+  Stacking-based regression ensemble predicting AQI numeric index values
+
+---
+
+## 📰 API Used
+
+* 🌐 [OpenWeather Air Pollution API](https://openweathermap.org/api/air-pollution)
+
+---
+
+## 📷 UI Design
+
+* **Streamlit ECharts** for interactive visualizations
+* Custom background image (`pexels-pixabay-266558.jpg`)
+* Cleanly styled Streamlit UI
+
+---
 
 ## 🚀 How to Run
 
-1. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+**Install dependencies**
 
-2. Run the app:
-   ```
-   streamlit run app.py
-   ```
-
-## 📁 Repository Structure
-```
-├── app.py
-├── final_stack_model_optimized.pkl
-├── final_stack_regression_optimized.pkl
-├── scaler_station.pkl
-├── label_encoder_station.pkl
-├── pexels-pixabay-266558.jpg
-├── requirements.txt
-├── ...
+```bash
+pip install -r requirements.txt
 ```
 
-## 📊 Models
-- Classification Model: Stacking-based classifier predicting AQI categories.
-- Regression Model: Stacking-based regressor predicting AQI index values.
+**Run the app**
 
-## 📡 API Used
-- [OpenWeather Air Pollution API](https://openweathermap.org/api/air-pollution)
+```bash
+streamlit run app.py
+```
 
-## 📷 UI Design
-- Streamlit ECharts for interactive plots.
-- Custom background image for UI aesthetics.
+---
 
-## 📌 Deployed at:
-[🔗 Streamlit Cloud link here after deploying]
+## 📌 Deployed at
+
+
+
+Local test: [http://localhost:8501/](http://localhost:8501/)
 
 ---
 
 ## ✨ Author
-**Shreya** (GitHub: [shreyaaaah](https://github.com/shreyaaaah))
+
+**Shreya**
+📎 GitHub: [shreyaaaah](https://github.com/shreyaaaah)
+
+---
