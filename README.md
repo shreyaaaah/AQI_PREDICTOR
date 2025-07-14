@@ -62,8 +62,8 @@ BreatheWise/
 ├── 📁 assets/                           # Static files & images
 │   └── pexels-pixabay-266558.jpg
 │
-├── 📁 docs/                             # Project report and result documents
-│   ├── FINAL PROJECT REPORT.pdf
+├── 📁 report/                             # Project report and result documents
+│   ├── PROJECT REPORT ONLINE SUMMER TRAINING.pdf
 │   └── FINAL RESULT.pdf
 │
 └── .gitignore                           # Ignore list for Git
