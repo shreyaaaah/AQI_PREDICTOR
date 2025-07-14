@@ -5,21 +5,16 @@ import numpy as np
 import pandas as pd
 from streamlit_echarts import st_echarts
 import base64
-import os
 
-# 📌 Load models and scalers
+# Load models and scalers
 clf_model = joblib.load('final_stack_model_optimized.pkl')
 reg_model = joblib.load('final_stack_regression_optimized.pkl')
 scaler = joblib.load('scaler_station.pkl')
 label_encoder = joblib.load('label_encoder_station.pkl')
 
-# 📌 Fetch API key from environment variable
-api_key = os.getenv("OPENWEATHER_API_KEY")
-if api_key is None:
-    st.error("API Key not found. Please set the OPENWEATHER_API_KEY environment variable.")
-    st.stop()
+api_key = '493a53955cbe6e63d28a621da8c6561b'
 
-# 📌 Set page config and background image
+# Set page config and background image
 st.set_page_config(page_title='BreatheWise - The Smart AQI Predictor', page_icon='🌬️')
 
 def set_bg_image(image_path):
@@ -45,13 +40,13 @@ def set_bg_image(image_path):
     """
     st.markdown(css, unsafe_allow_html=True)
 
-# Set your background image path here (adjust if needed)
+# Set your background image path here
 set_bg_image("C:/Users/LENOVO/OneDrive/Desktop/AQI PREDICTOR/pexels-pixabay-266558.jpg")
 
-# 📌 Title
+# Title
 st.markdown("<h1 style='text-align: center; color: white;'>🌬️ BreatheWise - The Smart AQI Predictor</h1>", unsafe_allow_html=True)
 
-# 📌 City input
+# City input
 city = st.text_input("Enter city name:")
 
 if city:
@@ -61,11 +56,11 @@ if city:
     if geo_response:
         lat, lon = geo_response[0]['lat'], geo_response[0]['lon']
 
-        # 📌 Weather API call
+        # Weather API call
         weather_url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric"
         weather_response = requests.get(weather_url).json()
 
-        # 📌 Air Pollution API call
+        # Air Pollution API call
         pollution_url = f"http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={api_key}"
         pollution_response = requests.get(pollution_url).json()
 
